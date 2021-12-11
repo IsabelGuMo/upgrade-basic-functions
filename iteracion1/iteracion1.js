@@ -15,7 +15,6 @@ console.log(highestNumber(5, 20));
 
 //Iteracion #2: Buscar la palabra mas larga//
 //Completa la función que tomando un array de strings como argumento devuelva el más largo, en caso de que dos strings tenga la misma longitud deberá devolver el primero.
-//Puedes usar este array para probar tu función://
 
 const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
 
@@ -33,3 +32,44 @@ function findLongestWord(avengersList) {
  
 console.log(findLongestWord(avengers));
 
+//Iteración #3: Calcular la suma
+//Calcular una suma puede ser tan simple como iterar sobre un array y sumar cada uno de los elementos.
+//Implemente la función denominada sumNumbers que toma un array de números como argumento y devuelve la suma de todos los números de la matriz.
+
+const numbers = [1, 2, 3, 5, 45, 37, 58];
+
+function sumAll(sumNumbers) {
+    let sum = sumNumbers[0];
+
+    for (let index = 1; index < sumNumbers.length; index++) {
+        sum += sumNumbers[index];
+    }
+    return console.log(sum);
+}
+sumAll(numbers);
+
+//Iteración #4: Calcular el promedio
+//Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:
+
+const number = [12, 21, 38, 5, 45, 37, 6];
+
+function averag(averNumber)  {
+    let sum = averNumber[0];
+
+    for (let index = 1; index < averNumber.length; index++) {
+        sum += averNumber[index];
+    }
+    return console.log(sum / averNumber.length);
+}
+averag(number);
+
+//Iteración #5: Calcular promedio de strings
+//Crea una función que reciba por parámetro un array 
+//y cuando es un valor number lo sume y de lo contrario cuente la longitud del string y lo sume. 
+
+
+const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
+
+function averageWord(param) {
+  // insert code
+}
