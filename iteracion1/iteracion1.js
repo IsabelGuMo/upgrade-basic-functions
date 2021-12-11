@@ -44,24 +44,28 @@ function sumAll(sumNumbers) {
     for (let index = 1; index < sumNumbers.length; index++) {
         sum += sumNumbers[index];
     }
-    return console.log(sum);
+
+    return (sum);
 }
-sumAll(numbers);
+
+console.log(sumAll(numbers));
 
 //Iteración #4: Calcular el promedio
 //Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:
 
 const number = [12, 21, 38, 5, 45, 37, 6];
 
-function averag(averNumber)  {
+function average(averNumber)  {
     let sum = averNumber[0];
 
     for (let index = 1; index < averNumber.length; index++) {
         sum += averNumber[index];
     }
-    return console.log(sum / averNumber.length);
+
+    return sum / averNumber.length;
 }
-averag(number);
+
+console.log(average(number));
 
 //Iteración #5: Calcular promedio de strings
 //Crea una función que reciba por parámetro un array 
@@ -70,6 +74,18 @@ averag(number);
 
 const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
 
-function averageWord(param) {
-  // insert code
+function averageWord(wordNumList) {
+    let sum = 0;
+    
+    for (let index = 0; index < wordNumList.length; index++) {
+        if (typeof wordNumList[index] === 'string') {
+            sum += wordNumList[index].length;
+        } else if (typeof wordNumList[index] === 'number') {
+            sum += wordNumList[index];
+        }
+    }
+    
+    return sum;
 }
+
+console.log(averageWord(mixedElements));
