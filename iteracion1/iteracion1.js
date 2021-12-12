@@ -89,3 +89,103 @@ function averageWord(wordNumList) {
 }
 
 console.log(averageWord(mixedElements));
+
+//Iteración #6: Valores únicos
+//Crea una función que reciba por parámetro un array y compruebe si existen elementos duplicados,
+// en caso que existan los elimina para retornar un array sin los elementos duplicados.
+
+
+
+const duplicates = [
+  'sushi',
+  'pizza',
+  'burger',
+  'potatoe',
+  'pasta',
+  'ice-cream',
+  'pizza',
+  'chicken',
+  'onion rings',
+  'pasta',
+  'soda'
+];
+
+function removeDuplicates(words) {
+    let noDuplicates = [];
+
+    for (let index = 0; index < words.length; index++) {
+        if (!noDuplicates.includes(words[index])) {
+            noDuplicates.push(words[index]);
+        } else {
+            words.pop();
+        }   
+    }
+    return noDuplicates;
+}
+
+let resultado = removeDuplicates(duplicates);
+console.log(resultado);
+
+//Iteración #7: Buscador de nombres
+//Crea una función que reciba por parámetro un array y el valor que desea comprobar que existe dentro de dicho array - comprueba si existe el elemento,
+// en caso que existan nos devuelve un true y la posición de dicho elemento y 
+//por la contra un false. 
+
+const nameFinder = [
+    'Peter',
+    'Steve',
+    'Tony',
+    'Natasha',
+    'Clint',
+    'Logan',
+    'Xabier',
+    'Bruce',
+    'Peggy',
+    'Jessica',
+    'Marc'
+  ];
+
+  function FinderName(stringList, aString) {
+    for (let index = 0; index < stringList.length; index++) {
+        if (stringList[index] === aString) {
+            return [true, index];
+        } 
+    }
+    return false;
+  }
+
+  console.log(FinderName(nameFinder, 'Logan'));
+
+  //Iteration #8: Contador de repeticiones
+  //Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.  
+
+  const counterWords = [
+    'code',
+    'repeat',
+    'eat',
+    'sleep',
+    'code',
+    'enjoy',
+    'sleep',
+    'code',
+    'enjoy',
+    'upgrade',
+    'code'
+  ];
+  
+  function repeatCounter(stringList) {
+    let contador = {};
+
+    for (let index = 0; index < stringList.length; index++) {
+        const word = stringList[index];
+        if (word in contador) {
+            contador[word]++;
+        } else {
+            contador[word] = 1;
+        }
+    }
+
+    return contador;
+  }
+
+  console.log(repeatCounter(counterWords));
